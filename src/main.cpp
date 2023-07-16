@@ -8,7 +8,8 @@
  * 
  * La soluzione qui proposta impone un limite di tempo per attendere l'acquisizione del mutex.
  * 
- * Se scade il tempo massimo di attesa, si gestisce l'eccezione e si ricomincia il task. 
+ * Se scade il tempo massimo di attesa, si gestisce l'eccezione rilasciando l'eventuale mutex già acquisito
+ * e si ricomincia il task.
  *
  * Nota: nel file soc.h sono definiti i riferimenti ai due core della ESP32:
  *   #define PRO_CPU_NUM (0)
